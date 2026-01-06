@@ -1,0 +1,36 @@
+---
+title: "My Plotly Presentation"
+author: "ROHAN"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This presentation demonstrates an interactive plot created using **Plotly** in R.
+
+---
+
+## Interactive Plotly Plot
+
+```{r plotly-plot, echo=FALSE}
+library(plotly)
+
+p <- plot_ly(
+  x = mtcars$wt,
+  y = mtcars$mpg,
+  type = "scatter",
+  mode = "markers",
+  text = rownames(mtcars),
+  marker = list(size = 10)
+)
+
+p
+```
+## Conclusion
+
+This presentation was created using R Markdown and includes an interactive Plotly visualization.
